@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sidebar-icon {
+    @apply items-center justify-start gap-2 text-gray-800 hover:text-blue-700 py-4 hover:bg-blue-200 rounded-lg cursor-pointer mx-auto my-2 font-medium text-center text-[1.1rem] duration-700;
+  }
+}
+
+body {
+  @apply box-border;
+}
