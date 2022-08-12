@@ -1,4 +1,3 @@
-import { walletCardsData } from '../../data/CardsData';
 import Assets from '../common/Assets';
 import Chart from '../common/Chart';
 import Wallets from '../common/Wallets';
