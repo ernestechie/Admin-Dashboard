@@ -6,7 +6,7 @@ const App = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <div className='w-screen h-screen grid grid-cols-12'>
+    <div className='w-screen h-screen grid grid-cols-12 font-poppins'>
       <SideBar navOpen={navOpen} setNav={setNavOpen} />
       <Dashboard navOpen={navOpen} />
     </div>
