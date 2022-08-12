@@ -1,4 +1,14 @@
+import { useState } from 'react';
+
 const CurrencyCard = (props) => {
+  const [showAmount, toggleShowAmount] = useState(true);
+
+  const toggleEyeIcon = () => {
+    toggleShowAmount(
+      showAmount ? () => toggleShowAmount(false) : () => toggleShowAmount(true)
+    );
+  };
+
   return (
     <div
       className={`p-4 ${props.colSpan} bg-white p-4 rounded-lg flex justify-between flex-col gap-2`}
@@ -9,13 +19,20 @@ const CurrencyCard = (props) => {
         </span>
         <span className='font-bold text-xl uppercase'>{props.name}</span>
         {props.eye && (
-          <span className='mt-2 text-2xl cursor-pointer'>
-            <ion-icon name='eye-outline'></ion-icon>
+          <span
+            className='mt-2 text-2xl cursor-pointer'
+            onClick={toggleEyeIcon}
+          >
+            {showAmount ? (
+              <ion-icon name='eye-off-outline'></ion-icon>
+            ) : (
+              <ion-icon name='eye-outline'></ion-icon>
+            )}
           </span>
         )}
       </span>
       <span className='__amount font-medium text-2xl text-gray-800'>
-        N{props.amount}
+        {showAmount ? `N${props.amount}` : '********'}
       </span>
       <span className='__footer flex items-center justify-between text-sm'>
         <p className='text-gray-500'>{props.payout}</p>
