@@ -8,6 +8,19 @@
   }
 }
 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  border-radius: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
 body {
   box-sizing: border-box;
   overflow-x: hidden;
