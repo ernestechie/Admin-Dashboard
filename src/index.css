@@ -9,5 +9,6 @@
 }
 
 body {
-  @apply box-border;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }

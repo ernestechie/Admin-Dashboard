@@ -11,7 +11,7 @@ const CurrencyCard = (props) => {
 
   return (
     <div
-      className={`p-4 ${props.colSpan} bg-white p-4 rounded-lg flex justify-between flex-col gap-2`}
+      className={`h-100 p-4 col-span-1 bg-white p-4 rounded-lg flex justify-between flex-col`}
     >
       <span className='__header flex justify-start items-center gap-4 py-2'>
         <span className={`mt-2 ${props.iconClass}`}>

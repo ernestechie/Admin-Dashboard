@@ -3,10 +3,8 @@ import sidebarData from '../../data/SidebarData';
 const SideBar = ({ navOpen, setNav }) => {
   return (
     <nav
-      className={`h-full p-4 bg-white shadow-lg
-      ${
-        navOpen ? ' col-span-2' : 'col-span-1'
-      } transition duration-500 ease-in`}
+      className={`fixed top-0 left-0 h-full p-4 bg-white shadow-lg
+      ${navOpen ? 'w-60' : 'w-20'} transition duration-500 ease-in z-20`}
     >
       <h1 className={`text-xl font-semibold text-center mb-8 mt-4`}>
         <span className={`text-blue-700 mx-2 text-3xl`}>
